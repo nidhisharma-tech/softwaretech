@@ -1,0 +1,34 @@
+---
+interface Props {
+    category: string;
+    why: string;
+    coursecontent: string[];
+    image: string;
+    duration: string;
+    
+}
+
+const { category, why, coursecontent, image, duration } = Astro.props;
+---
+
+<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+    <img src={image} alt={category} class="w-full h-64 object-cover" />
+    <div class="p-6">
+        <h3 class="text-xl font-bold mb-2">{category}</h3>
+        <p class="text-purple-700 font-semibold mb-2">{why}</p>
+        <p class="text-gray-700 mb-4">{duration}</p>
+        <div class="mb-4">
+            <h4 class="text-sm font-semibold text-gray-600 mb-2">Areas of Expertise:</h4>
+            <div class="flex flex-wrap gap-2">
+                {coursecontent.map(coursecontent => (
+                    <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">
+                        {coursecontent}
+                    </span>
+                ))}
+            </div>
+        </div>
+        <button class="w-full bg-purple-700 text-white py-2 rounded-lg hover:bg-purple-800 transition-colors">
+           Enroll for Course
+        </button>
+    </div>
+</div>

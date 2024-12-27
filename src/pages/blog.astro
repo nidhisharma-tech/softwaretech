@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import CourseCard from '../components/courses/CourseCard.astro';
+import PricingCard from '../components/mentoring/PricingCard.astro';
+import FAQItem from '../components/mentoring/FAQItem.astro';
+import BlogCard from '../components/blog/BlogCard.astro';
+
+const blogPosts = [
+    {
+        name: "Mastering Full-Stack Development",
+        description: "A guide to becoming a full-stack developer with modern tools and frameworks.",
+        image: "https://via.placeholder.com/400x300",
+        link: "/blogs/full-stack-development"
+    },
+    {
+        name: "AI and Machine Learning Trends for 2024",
+        description: "Explore the latest advancements and career opportunities in AI and ML.",
+        image: "https://via.placeholder.com/400x300",
+        link: "/blogs/ai-trends-2024"
+    },
+    {
+        name: "Best Practices in Backend Development",
+        description: "Learn about microservices, APIs, and scalable architecture for backend systems.",
+        image: "https://via.placeholder.com/400x300",
+        link: "/blogs/backend-best-practices"
+    }
+];
+
+const categories = [
+    { name: "Full-Stack Development", link: "/blogs/categories/full-stack" },
+    { name: "AI and Machine Learning", link: "/blogs/categories/ai-ml" },
+    { name: "Backend Development", link: "/blogs/categories/backend" },
+    { name: "Career Growth", link: "/blogs/categories/career-growth" },
+];
+
+const faqs = [
+    {
+        question: "Why should I read your blog?",
+        answer: "Our blog features expert insights, industry trends, and practical tips to help you grow your skills and advance your career."
+    },
+    {
+        question: "Do you cover topics beyond software development?",
+        answer: "Yes, we also share articles on career growth, leadership, and transitioning into tech roles from other industries."
+    },
+    {
+        question: "Can I contribute to your blog?",
+        answer: "Absolutely! We welcome guest posts from industry professionals and learners who want to share their knowledge and experiences."
+    },
+    {
+        question: "How often do you publish new articles?",
+        answer: "We publish fresh articles every week to keep you updated with the latest trends and techniques."
+    }
+];
+---
+
+<Layout 
+    title="Learn and Grow with Our Blog"
+    description="Discover insightful articles to enhance your knowledge and stay updated with industry trends.">
+    <PageHeader
+        title="Learn and Grow with Our Blog"
+        description="Explore articles written by industry experts and seasoned professionals. Stay updated with the latest trends in tech and grow your skills."
+    />
+
+    <!-- Featured Blog Section -->
+    <div class="max-w-6xl mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-center mb-12">Featured Articles</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+         {blogPosts.map(blogPost => (
+                    <a href={blogPost.link} class="text-lg text-blue-600 hover:underline">
+                        {blogPost.name}
+                    </a>
+                ))}
+        </div>
+    </div>
+
+    <!-- Categories Section -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Explore Categories</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                {categories.map(category => (
+                    <a href={category.link} class="text-lg text-blue-600 hover:underline">
+                        {category.name}
+                    </a>
+                ))}
+            </div>
+        </div>
+    </div>
+
+    
+</Layout>

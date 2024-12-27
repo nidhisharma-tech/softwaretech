@@ -1,0 +1,126 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import CourseCard from '../components/courses/CourseCard.astro';
+import PricingCard from '../components/mentoring/PricingCard.astro';
+import FAQItem from '../components/mentoring/FAQItem.astro';
+
+const courses = [
+    {
+        category: "Full-Stack Development",
+        why: "Full-stack developers are in high demand and can work in both front-end and back-end systems..",
+        coursecontent:["JavaScript","MongoDB","API development","Docker"],
+        image: "https://via.placeholder.com/400x300",
+        duration:"30 Hours"
+      
+    },
+      {
+        category: "AI and Machine Learning",
+        why: "AI/ML continues to be one of the fastest-growing fields, and software engineers should transition into it.",
+        coursecontent:["Python","TensorFlow","NLP","Computer Vision"],
+        image: "https://via.placeholder.com/400x300",
+        duration:"40 Hours"
+      
+    },
+      {
+        category: "Backend Development",
+        why: "Microservices architecture is widely adopted in modern software development",
+        coursecontent:["RESTful APIs","Event-driven architecture","Kafka","Deployment"],
+        image: "https://via.placeholder.com/400x300",
+        duration:"30 Hours"
+      
+    }
+   
+];
+const pricingPlans = [
+    {
+        title: "Full-Stack Development",
+        price: "£50",
+        description: "high in demand  ",
+        features: [
+            "1:1 sessions",
+            "Practical Projects",
+            "Offer Certification"
+        ]
+    },
+    {
+        title: "AI and Machine Learning",
+        price: "£55",
+        description: "Best Course To Build Your Software Career",
+        features: [
+         "1:1 sessions",
+            "Practical Projects",
+            "Offer Certification"
+            
+        ],
+        isPopular: true
+    },
+    {
+        title: "Backend Development",
+        price: "£50",
+        description: "Best in the market",
+        features: [
+            "1:1 sessions",
+            "Practical Projects",
+            "Offer Certification"
+        ]
+    }
+];
+const faqs = [
+    {
+        question: "What makes your courses different from others?",
+        answer: "Our courses are crafted by industry leaders and experienced professionals who work with cutting-edge technologies. Each course focuses on practical, real-world skills and includes hands-on projects to ensure you’re job-ready."
+    },
+    {
+        question: "Are your courses suitable for beginners?",
+        answer: "Yes, we offer beginner-friendly courses that require no prior experience. Each course includes clear instructions, foundational lessons, and step-by-step projects to guide you through the learning process."
+    },
+    {
+        question: "What kind of projects will I work on?",
+        answer: "You’ll work on real-world projects, such as building web applications, designing scalable systems, or creating AI-powered tools. These projects will strengthen your portfolio and showcase your skills to potential employers."
+    },
+    {
+        question: "Do You offer more courses than listed on the website?",
+        answer: "We do offer personalised courses as per your need."
+    }
+];
+---
+
+
+
+<Layout 
+    title="Enhance Your Technical and Leadership Skills"
+    description="Read below articles to enhance your knowlede base ">
+    <PageHeader
+        title="Enhance Your Technical and Leadership Skills"
+        description="Enroll for the courses below based on your interests and gain valuable insights from industry leaders as they share their experiences."
+    />
+
+    <div class="max-w-6xl mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-center mb-12">Our Courses</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {courses.map(course => (
+                <CourseCard {...course} />
+            ))}
+        </div>
+    </div>
+<div class="bg-gray-50 py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Mentoring Programs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {pricingPlans.map(plan => (
+                    <PricingCard {...plan} />
+                ))}
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-3xl mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-center mb-12">Want to know More About Our Courses?</h2>
+        <div class="space-y-4">
+            {faqs.map(faq => (
+                <FAQItem {...faq} />
+            ))}
+        </div>
+    </div>
+</Layout>

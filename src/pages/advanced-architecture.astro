@@ -1,0 +1,61 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="People Management Course">
+  <div class="max-w-6xl mx-auto px-4 py-16">
+    <h1 class="text-4xl font-bold mb-8">People Management</h1>
+    
+    <div class="grid md:grid-cols-3 gap-12">
+      <div class="md:col-span-2">
+        <h2 class="text-2xl font-bold mb-4">Course Overview</h2>
+        <p class="text-gray-600 mb-6">
+          Learn essential people management skills to build and lead high-performing engineering teams.
+        </p>
+        
+        <h3 class="text-xl font-bold mb-4">What You'll Learn</h3>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start">
+            <svg class="h-6 w-6 text-purple-700 mr-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Team Building & Culture</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="h-6 w-6 text-purple-700 mr-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Performance Management</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="h-6 w-6 text-purple-700 mr-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Conflict Resolution</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold mb-4">Course Details</h3>
+        <ul class="space-y-4">
+          <li class="flex justify-between">
+            <span class="text-gray-600">Duration</span>
+            <span class="font-semibold">6 weeks</span>
+          </li>
+          <li class="flex justify-between">
+            <span class="text-gray-600">Level</span>
+            <span class="font-semibold">Intermediate</span>
+          </li>
+          <li class="flex justify-between">
+            <span class="text-gray-600">Projects</span>
+            <span class="font-semibold">4</span>
+          </li>
+        </ul>
+        <button class="w-full bg-purple-700 text-white px-4 py-2 rounded-md mt-6 hover:bg-purple-800">
+          Enroll Now
+        </button>
+      </div>
+    </div>
+  </div>
+</Layout>

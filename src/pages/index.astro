@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home">
+	<div class="bg-gradient-to-r from-purple-700 to-indigo-700 text-white py-20">
+		<div class="max-w-6xl mx-auto px-4">
+			<div class="text-center">
+				<h1 class="text-5xl font-bold mb-6">Accelerate Your Tech Career with Expert Guidance</h1>
+				<p class="text-xl mb-8">Get personalized 1:1 mentoring from senior software engineers and tech leaders at top companies</p>
+				<div class="space-x-4">
+					<a href="/mentoring" class="bg-white text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-100">Book a Mentor</a>
+					<a href="/courses" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-700">Explore Courses</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="max-w-6xl mx-auto px-4 py-16">
+		<div class="text-center mb-12">
+			<h2 class="text-3xl font-bold mb-4">Why Choose Our 1:1 Mentoring?</h2>
+			<p class="text-gray-600 max-w-2xl mx-auto">Connect directly with experienced software engineers and tech leaders who have built and scaled products at top companies.</p>
+		</div>
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+			<div class="text-center p-8 rounded-lg shadow-lg bg-white">
+				<div class="text-purple-700 mb-4">
+
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+					</svg>
+				</div>
+				<h3 class="text-xl font-bold mb-4">Personalized Guidance</h3>
+				<p class="text-gray-600">Get tailored advice and feedback from experienced mentors who understand your career goals and challenges.</p>
+			</div>
+			<div class="text-center p-8 rounded-lg shadow-lg bg-white">
+				<div class="text-purple-700 mb-4">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+					</svg>
+				</div>
+				<h3 class="text-xl font-bold mb-4">Industry Expertise</h3>
+				<p class="text-gray-600">Learn from senior engineers and tech leaders who have built successful products at companies like Google, Meta, and Microsoft.</p>
+			</div>
+			<div class="text-center p-8 rounded-lg shadow-lg bg-white">
+				<div class="text-purple-700 mb-4">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+					</svg>
+				</div>
+				<h3 class="text-xl font-bold mb-4">Career Acceleration</h3>
+				<p class="text-gray-600">Fast-track your growth with practical insights, technical guidance, and proven strategies from industry veterans.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="bg-gray-50 py-16">
+		<div class="max-w-6xl mx-auto px-4">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold mb-4">Featured Learning Resources</h2>
+				<p class="text-gray-600 max-w-2xl mx-auto">Complement your mentoring with our curated technical courses and resources.</p>
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+				<img src="systemdesign.jpg" alt="System Design course thumbnail" class="w-full h-48 object-cover" />
+					<div class="p-6">
+						<h3 class="text-xl font-bold mb-2">System Design Mastery</h3>
+						<p class="text-gray-600 mb-4">Learn how to design scalable and reliable software systems from industry experts.</p>
+						<a href="/system-design" class="text-purple-700 font-semibold hover:text-purple-900">Learn more →</a>
+					</div>
+				</div>
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img src="https://via.placeholder.com/400x225" alt="Technical Leadership course thumbnail" class="w-full h-48 object-cover" />
+					<div class="p-6">
+						<h3 class="text-xl font-bold mb-2">Technical Leadership</h3>
+						<p class="text-gray-600 mb-4">Develop the skills needed to lead engineering teams and make technical decisions.</p>
+						<a href="/tech-leadership" class="text-purple-700 font-semibold hover:text-purple-900">Learn more →</a>
+					</div>
+				</div>
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img src="https://via.placeholder.com/400x225" alt="Advanced Architecture course thumbnail" class="w-full h-48 object-cover" />
+					<div class="p-6">
+						<h3 class="text-xl font-bold mb-2">People Management</h3>
+						<p class="text-gray-600 mb-4">Master people management skills and best practices to build high performing teams.</p>
+						<a href="/advanced-architecture" class="text-purple-700 font-semibold hover:text-purple-900">Learn more →</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout>

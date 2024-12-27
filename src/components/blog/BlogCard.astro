@@ -1,0 +1,28 @@
+---
+interface Props {
+  title: string;
+  excerpt: string;
+  date: string;
+  author: string;
+  slug: string;
+  readTime: string;
+}
+
+const { title, excerpt, date, author, slug, readTime } = Astro.props;
+---
+<article class="bg-white rounded-lg shadow-md overflow-hidden">
+  <div class="p-6">
+    <div class="flex items-center text-sm text-gray-500 mb-2">
+      <span>{date}</span>
+      <span class="mx-2">•</span>
+      <span>{readTime} read</span>
+    </div>
+    <h2 class="text-xl font-bold mb-2">
+      <a href={`/blog/${slug}`} class="hover:text-purple-700">{title}</a>
+    </h2>
+    <p class="text-gray-600 mb-4">{excerpt}</p>
+    <div class="flex items-center">
+      <span class="text-sm text-gray-500">By {author}</span>
+    </div>
+  </div>
+</article>

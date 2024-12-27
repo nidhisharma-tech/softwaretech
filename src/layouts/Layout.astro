@@ -1,0 +1,91 @@
+---
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Software career coaching, mentoring, and technical courses to help you grow in your tech career" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} | SoftwareCareer</title>
+	</head>
+	<body>
+		<header class="bg-gradient-to-r from-purple-700 to-indigo-700 text-white">
+			<nav class="max-w-6xl mx-auto px-4 py-4">
+				<div class="flex justify-between items-center">
+					<a href="/" class="text-2xl font-bold">SoftwareCareer</a>
+					<ul class="flex space-x-6">
+						<li><a href="/mentoring" class="hover:text-purple-200">Mentoring</a></li>
+						<li><a href="/courses" class="hover:text-purple-200">Courses</a></li>
+						<li><a href="/blog" class="hover:text-purple-200">Blog</a></li>
+						<li><a href="/contact" class="hover:text-purple-200">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<slot />
+		</main>
+		<footer class="bg-gray-900 text-white mt-20">
+			<div class="max-w-6xl mx-auto px-4 py-12">
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<div>
+						<h3 class="text-xl font-bold mb-4">SoftwareCareer</h3>
+						<p>Empowering tech careers through expert coaching and mentoring.</p>
+					</div>
+					<div>
+						<h3 class="text-xl font-bold mb-4">Quick Links</h3>
+						<ul class="space-y-2">
+							<li><a href="/mentoring" class="hover:text-purple-400">Mentoring</a></li>
+							<li><a href="/courses" class="hover:text-purple-400">Courses</a></li>
+							<li><a href="/blog" class="hover:text-purple-400">Blog</a></li>
+							<li><a href="/contact" class="hover:text-purple-400">Contact</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="text-xl font-bold mb-4">Connect</h3>
+						<ul class="space-y-2">
+							<li><a href="#" class="hover:text-purple-400">Twitter</a></li>
+							<li><a href="#" class="hover:text-purple-400">LinkedIn</a></li>
+							<li><a href="#" class="hover:text-purple-400">GitHub</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="border-t border-gray-800 mt-8 pt-8 text-center">
+					<p>&copy; {new Date().getFullYear()} SoftwareCareer. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #fff;
+		color: #1a1a1a;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+</style>

@@ -1,0 +1,133 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import MentorCard from '../components/mentoring/MentorCard.astro';
+import PricingCard from '../components/mentoring/PricingCard.astro';
+import FAQItem from '../components/mentoring/FAQItem.astro';
+
+const mentors = [
+    {
+        name: "Nidhi Sharma",
+        role: "Head of Engineering",
+         company: "Sainsburys",
+        specialties: ["Engineering Leadership","Women In Tech Mentor","AI Entusiastic"],
+        image: "https://via.placeholder.com/400x300",
+        experience: "15+ years of experience as engineer and leader in variuous domains",
+        mentorId:"1"
+    },
+    {
+        name: "Jennifer Lee",
+        role: "Engineering Director",
+        company: "Microsoft",
+        specialties: ["Technical Leadership", "Career Growth", "Team Management"],
+        image: "https://via.placeholder.com/400x300",
+        experience: "12 years leading engineering teams and mentoring developers",
+         mentorId:'2'
+    },
+    {
+        name: "Raj Patel",
+        role: "Senior Staff Engineer",
+        company: "Meta",
+        specialties: ["Distributed Systems", "Performance Optimization", "Technical Architecture"],
+        image: "https://via.placeholder.com/400x300",
+        experience: "10+ years designing large-scale distributed systems",
+         mentorId:'3'
+    }
+];
+
+const pricingPlans = [
+    {
+        title: "Career Coaching Session",
+        price: "£10",
+        description: "Personalised career mentoring session",
+        features: [
+            "30-minute 1:1 mentoring session",
+            "Career Guidance",
+            "Resume review",
+            "Resources for interview prep",
+            "Best practices guidance"
+        ]
+    },
+    {
+        title: "Professional Growth Coaching",
+        price: "£10",
+        description: "Preparing a career growth plan",
+        features: [
+            "30-minute 1:1 mentoring session",
+            "career planning",
+            "System design practice consultation",
+            "Code review sessions",
+            
+        ],
+        isPopular: true
+    },
+    {
+        title: "Engineering Leadership Path",
+        price: "£10",
+        description: "leadership preparation",
+        features: [
+            "30-minute 1:1 mentoring session",
+            "Leadership skill development",
+            "Team management strategies",
+            "Technical decision making"
+        ]
+    }
+];
+
+const faqs = [
+    {
+        question: "What makes your mentors qualified?",
+        answer: "Our mentors are industry leaders from top tech companies with extensive experience in software development, system design, and team leadership. They have proven track records of building and scaling successful products and teams."
+    },
+    {
+        question: "What can I expect from mentoring sessions?",
+        answer: "Sessions are tailored to your needs, covering technical guidance, career development, system design practice, code reviews, and architectural decisions. You'll get practical insights from experienced industry professionals."
+    },
+    {
+        question: "How are mentors matched with mentees?",
+        answer: "We match mentors based on your interests, career goals, and the specific areas where you want to grow. You can also choose your preferred mentor based on their expertise and background."
+    },
+    {
+        question: "What topics can be covered in sessions?",
+        answer: "Sessions can cover a wide range of topics including system design, coding best practices, architecture decisions, technical leadership, career growth strategies, and specific technical challenges you're facing."
+    }
+];
+---
+
+<Layout 
+    title="Industry Expert Mentoring"
+    description="Learn from experienced engineers and industry leaders who have built and scaled successful products">
+    <PageHeader
+        title="Learn from Industry Leaders"
+        description="Get personalized mentoring from experienced engineers and industry leaders who have built and scaled successful products at top tech companies"
+    />
+
+    <div class="max-w-6xl mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-center mb-12">Our Industry Expert Mentors</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {mentors.map(mentor => (
+                <MentorCard {...mentor} />
+            ))}
+        </div>
+    </div>
+
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Mentoring Programs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {pricingPlans.map(plan => (
+                    <PricingCard {...plan} />
+                ))}
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-3xl mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+            {faqs.map(faq => (
+                <FAQItem {...faq} />
+            ))}
+        </div>
+    </div>
+</Layout>
