@@ -7,32 +7,48 @@ import FAQItem from '../components/mentoring/FAQItem.astro';
 
 const mentors = [
     {
-        name: "Nidhi Sharma",
+        name: "Adam Owens",
         role: "Head of Engineering",
-         company: "Sainsburys",
-        specialties: ["Engineering Leadership","Women In Tech Mentor","AI Entusiastic"],
-        image: "https://via.placeholder.com/400x300",
+        specialties: ["Engineering Leadership","AI Entusiastic","Career Growth"],
         experience: "15+ years of experience as engineer and leader in variuous domains",
         mentorId:"1"
     },
     {
-        name: "Jennifer Lee",
-        role: "Engineering Director",
-        company: "Microsoft",
-        specialties: ["Technical Leadership", "Career Growth", "Team Management"],
-        image: "https://via.placeholder.com/400x300",
+        name: "Gayatri Indoria",
+        role: "Program Management",
+        specialties: ["People Management", "Career Growth", "Team Management"],
         experience: "12 years leading engineering teams and mentoring developers",
-         mentorId:'2'
+         mentorId:"2"
     },
     {
         name: "Raj Patel",
         role: "Senior Staff Engineer",
-        company: "Meta",
-        specialties: ["Distributed Systems", "Performance Optimization", "Technical Architecture"],
-        image: "https://via.placeholder.com/400x300",
+        specialties: ["Distributed Systems", "Interview Prep", "Technical Architecture"],
         experience: "10+ years designing large-scale distributed systems",
-         mentorId:'3'
-    }
+         mentorId:"3"
+    },
+    {
+        name: "Ruby Cowens",
+        role: "Senior Engineer",
+        specialties: ["Programming ", "Interview Prep", "Coding "],
+        experience: "15+ years designing large-scale distributed systems",
+         mentorId:"4"
+    },
+    {
+        name: "Manisha Sharma",
+        role: "Technical Manager ",
+        specialties: ["Programming ", "Interview Prep", "Management "],
+        experience: "16+ years designing large-scale distributed systems",
+         mentorId:"5"
+    },
+    {
+        name: "Paul Zanghari",
+        role: "Project Manager ",
+        specialties: ["People Management ", "Conflict Management", "Planning "],
+        experience: "10+ years designing large-scale distributed systems",
+         mentorId:"6"
+    },
+
 ];
 
 const pricingPlans = [
@@ -109,6 +125,12 @@ const faqs = [
                 <MentorCard {...mentor} />
             ))}
         </div>
+      <!--  <form id="schedule-form" data-mentor-id="success">--> 
+            <a href="/contact">
+            <button type="button" class="w-full bg-purple-700 text-white py-2 rounded-lg hover:bg-purple-800 transition-colors">
+                Schedule Mentoring Session
+            </button></a>
+       <!-- </form> --> 
     </div>
 
     <div class="bg-gray-50 py-16">

@@ -29,11 +29,11 @@ const { title, price, description, features, isPopular = false } = Astro.props;
             </li>
         ))}
     </ul>
-    <button class={`w-full py-3 rounded-lg font-semibold transition-colors ${
+  <a href="/contact"> <button class={`w-full py-3 rounded-lg font-semibold transition-colors ${
         isPopular 
             ? 'bg-purple-700 text-white hover:bg-purple-800' 
             : 'bg-purple-100 text-purple-700 hover:bg-purple-200'
     }`}>
         Get Started
-    </button>
+    </button></a>
 </div>

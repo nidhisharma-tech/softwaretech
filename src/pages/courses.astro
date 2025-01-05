@@ -10,7 +10,7 @@ const courses = [
         category: "Full-Stack Development",
         why: "Full-stack developers are in high demand and can work in both front-end and back-end systems..",
         coursecontent:["JavaScript","MongoDB","API development","Docker"],
-        image: "https://via.placeholder.com/400x300",
+        image: "fullstackdev.jpg",
         duration:"30 Hours"
       
     },
@@ -18,7 +18,7 @@ const courses = [
         category: "AI and Machine Learning",
         why: "AI/ML continues to be one of the fastest-growing fields, and software engineers should transition into it.",
         coursecontent:["Python","TensorFlow","NLP","Computer Vision"],
-        image: "https://via.placeholder.com/400x300",
+        image: "AIdevelopment.png",
         duration:"40 Hours"
       
     },
@@ -26,7 +26,7 @@ const courses = [
         category: "Backend Development",
         why: "Microservices architecture is widely adopted in modern software development",
         coursecontent:["RESTful APIs","Event-driven architecture","Kafka","Deployment"],
-        image: "https://via.placeholder.com/400x300",
+        image: "backenddev.png",
         duration:"30 Hours"
       
     }
@@ -103,6 +103,9 @@ const faqs = [
                 <CourseCard {...course} />
             ))}
         </div>
+       <a href="/contact"> <button class="w-full bg-purple-700 text-white py-2 rounded-lg hover:bg-purple-800 transition-colors">
+            Enroll for Course
+         </button></a>
     </div>
 <div class="bg-gray-50 py-16">
         <div class="max-w-6xl mx-auto px-4">

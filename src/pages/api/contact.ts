@@ -1,4 +1,7 @@
 import type { APIRoute } from 'astro';
+import nodemailer from 'nodemailer';
+import dotenv from 'dotenv';
+dotenv.config();
 
 export const POST: APIRoute = async ({ request }) => {
   try {
@@ -15,10 +18,31 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
 
-    // Here you would typically:
-    // 1. Send email notification
-    // 2. Store in database
-    // 3. Integrate with CRM
+    // Configure the Nodemailer transporter
+    const transporter = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port:587,
+      service: 'gmail',
+      auth: {
+        user: 'infosoftwarecareer@gmail.com', // Your email address
+        pass: 'iopg nour goqp abwx', // Your email password or app password
+      },
+    });
+
+    // Define the email options
+    const mailOptions = {
+      from: body.email, // Sender's email address
+      to: 'infosoftwarecareer@gmail.com', // Recipient's email address
+      subject: 'New Contact Form Submission',
+      text: `
+        Name: ${body.name}
+        Email: ${body.email}
+        Message: ${body.message}
+      `,
+    };
+
+    // Send the email
+    await transporter.sendMail(mailOptions);
 
     return new Response(
       JSON.stringify({

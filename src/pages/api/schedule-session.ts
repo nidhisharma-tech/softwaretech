@@ -30,7 +30,7 @@ export const POST: APIRoute = async ({ request }) => {
       JSON.stringify({
         success: true,
         sessionId: session.id,
-        message: 'Session scheduled successfully',
+        message: 'Session scheduled successfully ts file',
       }),
       {
         status: 200,
